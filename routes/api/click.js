@@ -6,7 +6,6 @@ router.get('/add', function(req, res, next) {
     res.json({
         message: 'click created'
     });
-
 });
 
 module.exports = router;
