@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var clicks = require('./routes/api/click');
+var db = require('./model/db');
 
 var app = express();
 
@@ -49,5 +50,3 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
-
-
