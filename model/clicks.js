@@ -1,5 +1,11 @@
 var mongoose = require('mongoose');
 var clickSchema = new mongoose.Schema({
   //Define the attributes of a click
+  userId: Number,
+  clickEvent: {
+    //Define the attributes of events
+  }
 });
-mongoose.model('Click', clickSchema);
+var ClickModel = mongoose.model('Click', clickSchema);
+
+exports.ClickModel = ClickModel;
