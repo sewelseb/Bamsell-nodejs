@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-var ClickModel = require('../model/click');
+//var ClickModel = require('click');
+
 
 /* GET create click entry. */
 router.get('/add', function(req, res, next) {
