@@ -22,9 +22,7 @@ router.get('/add', function(req, res, next) {
         console.log(err);
       }
     });
-    res.json({
-        message: 'click created'
-    });
+   
 });
 
 module.exports = router;
