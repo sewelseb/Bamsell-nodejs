@@ -2,8 +2,7 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
 var url = require('url');
-var url_parts = url.parse(request.url, true);
-var query = url_parts.query;
+
 
 var model = require('../../model/clicksModel');
 
