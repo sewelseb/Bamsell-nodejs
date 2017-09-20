@@ -16,7 +16,7 @@ router.get('/add', function(req, res, next) {
         userId = null;
     }
     var regClick = new model.ClickModel({
-        userId: req.query.userId,
+        userId: userId,
         url: req.query.url,
         clickEvent:null
     })
