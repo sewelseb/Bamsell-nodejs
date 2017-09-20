@@ -31,4 +31,13 @@ router.get('/add', function(req, res, next) {
     });
 });
 
+router.get('/count', function(req, res, next) {
+
+    var numberOfClicks = model.ClickModel.count();
+
+    res.json({
+        'numberOfClicks': numberOfClicks
+    });
+});
+
 module.exports = router;
