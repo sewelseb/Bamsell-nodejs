@@ -37,13 +37,14 @@ router.get('/add', function(req, res, next) {
 router.get('/count', function(req, res, next) {
 
 
-    var numberOfClicks = ClickModel.count({}).exec();
-
-    console.log(numberOfClicks);
-
-    res.json({
-        'numberOfClicks': numberOfClicks
+    ClickModel.count({}, function (err, count) {
+        console.log(count);
+        res.json({
+            'numberOfClicks': count
+        });
     });
+
+
 });
 
 module.exports = router;
