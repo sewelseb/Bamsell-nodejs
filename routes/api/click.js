@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 var url = require('url');
 
 
+
 var model = require('../../model/clicksModel');
 
 //route: /api/click/
@@ -36,7 +37,7 @@ router.get('/add', function(req, res, next) {
 router.get('/count', function(req, res, next) {
 
 
-    var numberOfClicks = ClickModel.count({}, function( err, count){
+    var numberOfClicks = model.count({}, function( err, count){
         console.log( "Number of clicks:", count );
     });
 
