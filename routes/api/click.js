@@ -10,6 +10,11 @@ var model = require('../../model/clicksModel');
 /* GET create click entry. */
 router.get('/add', function(req, res, next) {
     //console.log(req);
+    var userId = req.query.userId;
+    if(userId == 'undefined')
+    {
+        userId = null;
+    }
     var regClick = new model.ClickModel({
         userId: req.query.userId,
         url: req.query.url,
