@@ -37,7 +37,7 @@ router.get('/add', function(req, res, next) {
 router.get('/count', function(req, res, next) {
 
 
-    var numberOfClicks = ClickModel.count({});
+    var numberOfClicks = ClickModel.count({}).exec();
 
     console.log(numberOfClicks);
 
