@@ -6,6 +6,8 @@ var url = require('url');
 
 var model = require('../../model/clicksModel');
 
+//route: /api/click/
+
 
 /* GET create click entry. */
 router.get('/add', function(req, res, next) {
@@ -33,7 +35,9 @@ router.get('/add', function(req, res, next) {
 
 router.get('/count', function(req, res, next) {
 
-    var numberOfClicks = model.ClickModel.count();
+    var numberOfClicks = model.ClickModel.count({}, function( err, count){
+        console.log( "Number of clicks:", count );
+    });
 
     res.json({
         'numberOfClicks': numberOfClicks
